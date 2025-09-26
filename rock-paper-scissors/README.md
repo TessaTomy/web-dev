@@ -1,14 +1,18 @@
-# Rock Paper Scissors
+# 🎮 _Rock Paper Scissors_
 
-A browser-based implementation of the classic game, built with HTML, CSS, and JavaScript.
+_A browser-based implementation of the classic hand game, built with **HTML**, **CSS**, and **JavaScript**. Designed for interactive play with clean visuals and responsive logic._
 
-## Features
-- Interactive UI with score tracking
-- Player vs. Computer logic
-- Visual feedback and animations
-- Reset option for replay
+---
 
-## File Structure
+## ✨ _Features_
+- Real-time score tracking
+- Player vs. Computer gameplay
+- Gesture-based animations and feedback
+- Reset option for replayability
+
+---
+
+## 📁 _File Structure_
 - `index.html` — main layout and markup
 - `Assests/styles/style.css` — styling and transitions
 - `Assests/script/game.js` — game logic and event handling
