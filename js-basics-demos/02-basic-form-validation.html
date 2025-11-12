@@ -1,0 +1,163 @@
+validate.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function validate(event)
+        {
+            event.preventDefault();
+            let v1=0,v2=0,v3=0;
+            let form=new FormData(event.target);
+            let name=form.get("txtname");
+            let v=document.getElementById("name_error");
+            if(!/^[a-zA-Z]+$/.test(name))
+            {
+                v.innerHTML="*Name Should Only Conatin Alphabets !"
+                v.style.color="red";
+                v3=0;
+            }
+            else
+            {
+                v3=1;
+                v.innerHTML="";
+            }
+
+            let num=form.get("no");
+            let n=document.getElementById("no_error");
+            if(/[a-zA-Z]/.test(num))
+            {
+                n.innerHTML="**No Alphabets !!"
+                n.style.color="red";
+                v2=0;
+            }
+            else
+            {
+                v2=1;
+                n.innerHTML="";
+            }
+
+            let pass=form.get("password");
+            let p=document.getElementById("pass_error");
+            if(pass.length<6)
+            {
+                p.innerHTML="**use minimum 6 characters for password !";
+                p.style.color="red";
+                v1=0;
+            }
+            else
+            {
+                v1=1;
+                p.innerHTML="";
+            }
+            if(v1&v2&v3)
+                event.target.submit();
+        }
+    </script>
+    <style>
+        *{
+            font-family: Chilanka !important;
+            font-size: medium;
+        }
+        body{
+           display: grid;
+           place-items: center;
+           height: 100vh;
+           
+           background-color: rgb(15, 15, 14);
+        }
+        .contain{
+            padding: 12% 10% 19% 10%;
+            width: 300px;
+            height: 300px;
+            border: none;
+            box-shadow: 0px 4px 20px rgb(128, 177, 100);
+            border-radius: 20px;
+            background-color: rgb(12, 12, 11);
+            overflow: hidden;
+        }
+        input,textarea{
+            margin: 5px;
+            padding: 5%;
+            border-radius: 10px;
+            border: none;
+            border-bottom: 3px solid rgb(128, 177, 100);
+            background-color: transparent;
+        }
+        input[type="text"],input[type="number"],input[type="password"],textarea
+        {
+            width: 100%;
+        }
+        input[type=submit]
+        {
+            border-radius: 50px;
+            border: 2px solid rgb(128, 177, 100);
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <form onsubmit="validate(event)">
+            <table>
+            <tr>
+                <td>Name </td>
+                
+                <td>
+                    <input type="text" name="txtname" id="" required>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <p id="name_error" style="font-size: 12px;"></p>    
+                </td>
+            </tr>
+            <tr>
+                <td>Gender </td>
+                <td>
+                    <input type="radio" name="rgender" id="gender" value="Male" required>Male
+                    <input type="radio" name="rgender" id="gender" value="Female" required>Female
+                </td>
+            </tr>
+            <tr>
+                <td>Phone </td>
+                <td>
+                    <input type="text" name="no" id="no" required  maxlength="10" minlength="10">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <p id="no_error" style="font-size: 12px;"></p>    
+                </td>
+            </tr>
+            <tr>
+                <td>Address </td>
+                <td>
+                    <textarea name="address" id="address" required></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password 
+                </td>
+                <td>
+                    <input type="password" name="password" required>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <p id="pass_error" style="font-size: 12px;"></p>    
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
