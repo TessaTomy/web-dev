@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd or Even</title>
+    <script>
+        function check()
+        {
+            let x=document.getElementById("num").value;
+            if(!x)
+                alert("Enter a Value First to Evaluate !!");
+            else
+                document.getElementById("res").value=(x%2==0)?x+" is Even !!":x+" is Odd !!";
+          return false;
+        }
+
+    </script>
+    <style>
+        body{
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            background: radial-gradient(rgb(0, 0, 0), rgb(174, 187, 154), black)
+        }
+        input:focus {
+            outline: none;
+            }
+        div{
+            text-align: center;
+            width: 50%;
+        }
+        input{
+            width: 100%;
+            border-radius: 50px;
+            height: 50px;
+            margin: 10px;
+            border: none;
+            border-bottom: 3px solid #d6fa09;
+            padding-left: 10px;
+            background-color: transparent;
+            font-size:16px;
+            font-weight: bolder;
+            font-family: purisa;
+        }
+        input::placeholder {
+            color: #F0F0F0;
+        }
+        input[type='submit']
+        {
+            width: 30%;
+            border: 1px solid;
+        }
+        h2{
+            font-weight: bolder;
+            font-family: purisa;
+            color: #d6fa09;
+            padding-bottom: 20px;
+        }
+        #btn:hover{
+            box-shadow: 0px 4px 15px #d6fa09;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Odd or Even Checker</h2>
+        <br>
+        <input type="number" name="num" id="num" placeholder="Enter Value to Check........." >
+        <br>
+        <input type="submit" value="Submit" onclick="check()" id="btn">
+        <br>
+        <input type="text" id="res" readonly>
+    </div>
+</body>
+</html>
