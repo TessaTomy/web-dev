@@ -1,4 +1,4 @@
-# web-dev
+# 🕸️ *web-dev*
 
 **Explorations in web development** — JavaScript, HTML, CSS, and frameworks as I learn.  
 Each entry reflects clear logic, modular thinking, and steady growth.
