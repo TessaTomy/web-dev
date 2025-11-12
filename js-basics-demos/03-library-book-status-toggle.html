@@ -1,0 +1,145 @@
+<!-- create a libaray book managemnet system where each book shows it title autor and its availabily  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: purisa;
+        }
+        body{
+            background-color: rgb(37, 34, 29);
+        }
+        h1{
+            text-align: center;
+            color: rgb(187, 187, 69);
+            text-shadow: 0px 0px 16px rgb(38, 142, 228);
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap: 20px;
+            max-width:1200px;
+        }
+        .book-image{
+            height: 300px;
+            border: none;
+            
+        }
+        .book-details{
+            text-align: justify;
+        }
+        .book-item,.book-image{
+            text-align: center;
+            padding: 10%;
+        }
+        .status1
+        {
+            color: red;
+        }
+        .book-item:hover {
+            border-radius: 10px;
+            box-shadow: 0px 2px 12px rgb(173, 224, 33);
+        }
+        .status1:hover {
+            background-color: pink;
+        }
+        .status2 {
+            color: green;
+        }
+        input,button{
+            border: none;
+            outline: none;
+            background-color: transparent;
+            font-size: medium;
+            color: green;
+        }
+    </style>
+    <script>
+        function check(element)
+        {
+           let c=element.value;
+           if(c=="Available")
+           {
+                element.value="Unavailable";
+                element.style.color="red";
+           }
+           else
+           {
+                element.value="Available";
+                element.style.color="green";
+           }
+        }
+    </script>
+</head>
+    <div class="book">
+        <h1>Books In-Stock</h1>
+    </div>
+    <div class="container">
+        <div class="container">
+        <div class="book-item">
+            <div class="book-image">
+                <img src="b.jpeg" alt="The Hypocrite World Cover">
+            </div>
+            <div class="book-details">
+                <h2>The Hypocrite World</h2>
+                <p>by Sophia Hill</p>
+                <input type="button" class="status" value="Available"  onclick="check(this)" id="stat">
+            </div>
+        </div>
+
+        <div class="book-item">
+            <div class="book-image">
+                <img src="b2.jpeg" alt="The Last Castle Cover">
+            </div>
+            <div class="book-details">
+                <h2>The Last Castle</h2>
+                <p>by Arthur Morgan</p>
+                    <input type="button" class="status" value="Available"  onclick="check(this)" id="stat">
+            </div>
+        </div>
+
+        <div class="book-item">
+            <div class="book-image">
+                <img src="b3.jpeg" alt="Silent Screams Cover">
+            </div>
+            <div class="book-details">
+                <h2>Silent Screams</h2>
+                <p>by Emily Stone</p>
+                <input type="button" class="status" value="Available"  onclick="check(this)" id="stat">            </div>
+        </div>
+
+        <div class="book-item">
+            <div class="book-image">
+                <img src="b4.jpeg" alt="Journey to the Stars Cover">
+            </div>
+            <div class="book-details">
+                <h2>Journey to the Stars</h2>
+                <p>by Mark Jones</p>
+                <input type="button" class="status" value="Available"  onclick="check(this)" id="stat">            </div>
+        </div>
+
+        <div class="book-item">
+            <div class="book-image">
+                <img src="b5.jpeg" alt="Whispers of the Past Cover">
+            </div>
+            <div class="book-details">
+                <h2>Whispers of the Past</h2>
+                <p>by Clara Evans</p>
+                <input type="button" class="status" value="Available"  onclick="check(this)" id="stat">            </div>
+        </div>
+
+        <div class="book-item">
+            <div class="book-image">
+                <img src="b1.jpeg" alt="The Secret Garden Cover">
+            </div>
+            <div class="book-details">
+                <h2>The Secret Garden</h2>
+                <p>by Frances Burnett</p>
+                <input type="button" class="status" value="Available"  onclick="check(this)" id="stat">            </div>
+        </div>
+    </div>
+</body>
+</html>
