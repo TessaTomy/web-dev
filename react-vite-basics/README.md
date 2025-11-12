@@ -1,21 +1,21 @@
-## ⚛️ React + Vite Basics 
+# ⚛️ _React + Vite Basics_ 
 
 This folder provides a structured collection of **minimal React projects** built with ⚡️ **Vite**, designed to support fast learning, prototyping, and reference. Each subdirectory focuses on a specific React concept—such as components, state, hooks, or routing—and serves as a reliable starting point for experimentation or reuse.
 
 ---
 
-### 🚀 Setup & First Launch
+## 🚀 _Setup & First Launch_
 
 This repo runs on **Vite** for fast dev and uses **npm** for package management.
 
-#### 🛠️ Prerequisites
+## 🛠️ _Prerequisites_
 
 Make sure you’ve got:
 
 - 🟢 **Node.js** (v18+ recommended)  
 - 📦 **npm** (comes with Node)
 
-#### ✨ Create a New Project
+## ✨ _Create a New Project_
 
 From the `react-vite-basics` root folder, run:
 
@@ -31,7 +31,7 @@ npm create vite@latest
 
 ---
 
-### 🧪 Run Any Demo Project
+## 🧪 _Run Any Demo Project_
 
 To run a demo (like `01-component-structure`), follow these three steps:
 
